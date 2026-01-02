@@ -75,10 +75,11 @@ mhProfileUI <- function(id) {
       )
     ),
     fluidRow(
-      column(6,
-             textToChartUI(ns("gender_comparison_chart"), "Depression Severity by Gender", height = "350px")
+      column(5,
+             # textToChartUI(ns("gender_comparison_chart"), "Depression Severity by Gender", height = "350px")
+             plotlyOutput(ns("gender_comparison_chart"), height = "400px")
       ),
-      column(6,
+      column(7,
              div(class = "info-box",
                  h5(icon("balance-scale"), " Gender Disparities in Depression"),
                  HTML("
@@ -147,7 +148,7 @@ mhProfileUI <- function(id) {
                status = "primary",
                width = 12,
                elevation = 2,
-               plotlyOutput(ns("conditions_chart"), height = "300px")
+               plotlyOutput(ns("conditions_chart"), height = "350px")
              )
       )
     ),

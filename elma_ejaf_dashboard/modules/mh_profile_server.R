@@ -78,7 +78,7 @@ mhProfileServer <- function(id) {
           showlegend = TRUE,
           legend = list(orientation = "h", x = 0.5, y = -0.3, xanchor = "center"),
           margin = list(b = 100, t = 50)
-        )
+        ) 
     })
     
     # Render Conditions Chart
@@ -90,9 +90,9 @@ mhProfileServer <- function(id) {
         type = "bar",
         marker = list(color = ~Color),
         text = ~paste0(Prevalence, "%"),
-        textposition = "outside",
-        hovertemplate = "<b>%{x}</b><br>Prevalence: %{y}%<br>Urgency: %{text}<extra></extra>",
-        text = ~Urgency
+        textposition = "outside"#,
+        # hovertemplate = "<b>%{x}</b><br>Prevalence: %{y}%<br>Urgency: %{text}<extra></extra>",
+        # text = ~Urgency
       ) %>%
         layout(
           title = "Prevalent Mental Health Conditions Among AYPs",

@@ -113,7 +113,7 @@ studyDesignUI <- function(id) {
                status = "primary",
                width = 12,
                collapsible = TRUE,
-               collapsed = TRUE,
+               collapsed = FALSE,
                DTOutput(ns("sampling_summary"))
              )
       )

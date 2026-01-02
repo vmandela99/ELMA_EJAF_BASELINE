@@ -58,7 +58,8 @@ aypBehaviorsUI <- function(id) {
              )
       ),
       column(6,
-             textToChartUI(ns("behavior_components_chart"), "Behavior Components Distribution", height = "350px")
+             # textToChartUI(ns("behavior_components_chart"), "Behavior Components Distribution", height = "350px")
+             plotlyOutput(ns("behavior_components_chart"), height = "350px")
       )
     ),
     
@@ -119,7 +120,8 @@ aypBehaviorsUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("info_sources_chart"), "Communication Channels Used by AYPs", height = "350px")
+             # textToChartUI(ns("info_sources_chart"), "Communication Channels Used by AYPs", height = "350px")
+             plotlyOutput(ns("info_sources_chart"), height = "350px")
       ),
       column(6,
              highlightCardUI(

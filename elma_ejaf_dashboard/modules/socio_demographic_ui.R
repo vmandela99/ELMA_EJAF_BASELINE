@@ -10,10 +10,10 @@ socioDemographicUI <- function(id) {
     
     # Key Statistics Row
     fluidRow(
-      column(3, metricCardUI(ns("total_ayp"), "Total AYPs", "465", "Surveyed", "users", "primary")),
-      column(3, metricCardUI(ns("females"), "Female AYPs", "352", "75.7%", "female", "danger")),
-      column(3, metricCardUI(ns("males"), "Male AYPs", "113", "24.3%", "male", "info")),
-      column(3, metricCardUI(ns("mpi_poor"), "MPI Poor", "26%", "Multi-dimensionally poor", "exclamation-triangle", "warning"))
+      column(6, metricCardUI(ns("total_ayp"), "Total AYPs", "465", "Surveyed", "users", "primary")),
+      column(6, metricCardUI(ns("females"), "Female AYPs", "352", "75.7%", "female", "danger")),
+      column(6, metricCardUI(ns("males"), "Male AYPs", "113", "24.3%", "male", "info")),
+      column(6, metricCardUI(ns("mpi_poor"), "MPI Poor", "26%", "Multi-dimensionally poor", "exclamation-triangle", "warning"))
     ),
     
     # Executive Summary
@@ -48,7 +48,8 @@ socioDemographicUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("age_chart"), "Age Distribution (%)", height = "350px")
+             # textToChartUI(ns("age_chart"), "Age Distribution (%)", height = "350px")
+             plotly::plotlyOutput(ns("age_chart"), height = "350px")
       ),
       column(6,
              highlightCardUI(
@@ -77,7 +78,8 @@ socioDemographicUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("education_chart"), "Education Levels (%)", height = "350px")
+             # textToChartUI(ns("education_chart"), "Education Levels (%)", height = "350px")
+             plotly::plotlyOutput(ns("education_chart"), height = "350px")
       ),
       column(6,
              highlightCardUI(
@@ -106,7 +108,8 @@ socioDemographicUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("sexual_behavior_chart"), "Sexual Behavior by Gender (%)", height = "300px")
+             # textToChartUI(ns("sexual_behavior_chart"), "Sexual Behavior by Gender (%)", height = "300px")
+             plotly::plotlyOutput(ns("sexual_behavior_chart"), height = "300px")
       ),
       column(6,
              div(class = "warning-box",
@@ -132,7 +135,8 @@ socioDemographicUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("poverty_chart"), "Poverty Status by Gender (%)", height = "300px")
+             # textToChartUI(ns("poverty_chart"), "Poverty Status by Gender (%)", height = "300px")
+             plotly::plotlyOutput(ns("poverty_chart"), height = "300px")
       ),
       column(6,
              div(class = "info-box",

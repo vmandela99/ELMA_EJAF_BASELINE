@@ -44,6 +44,7 @@ projectContextUI <- function(id) {
     fluidRow(
       column(6,
              textToChartUI(ns("hiv_chart"), "HIV Prevalence Among Different Groups")
+             # plotlyOutput(ns("hiv_chart"))
       ),
       column(6,
              bs4Card(
@@ -68,9 +69,11 @@ projectContextUI <- function(id) {
     fluidRow(
       column(6,
              textToChartUI(ns("contraceptive_chart"), "Contraceptive Coverage and Targets")
+             # plotlyOutput(ns("contraceptive_chart"))
       ),
       column(6,
-             textToChartUI(ns("pregnancy_chart"), "Adolescent Pregnancies by District (2020)")
+             # textToChartUI(ns("pregnancy_chart"), "Adolescent Pregnancies by District (2020)")
+             plotlyOutput(ns("pregnancy_chart"))
       )
     ),
     

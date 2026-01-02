@@ -1,3 +1,5 @@
+source("data/awareness_data.R")
+
 # modules/mh_awareness_ui.R
 mhAwarenessUI <- function(id) {
   ns <- NS(id)
@@ -10,8 +12,8 @@ mhAwarenessUI <- function(id) {
     
     # Key Statistics Row
     fluidRow(
-      column(3, metricCardUI(ns("mh_excellent"), "Excellent MH", "33.8%", "Self-reported", "smile", "success")),
-      column(3, metricCardUI(ns("mh_good"), "Good MH", "33.3%", "Self-reported", "meh", "warning")),
+      column(3, metricCardUI(ns("mh_excellent"), "Excellent MH", "33.8%", "Had Excellent MH", "smile", "success")),
+      column(3, metricCardUI(ns("mh_good"), "Good MH", "33.3%", "Had Good MH", "meh", "warning")),
       column(3, metricCardUI(ns("male_excellent"), "Males Excellent", "42%", "vs 31% females", "male", "info")),
       column(3, metricCardUI(ns("stress_financial"), "Financial Stress", "29%", "Leading cause", "money-bill-wave", "danger"))
     ),
@@ -54,7 +56,8 @@ mhAwarenessUI <- function(id) {
              )
       ),
       column(6,
-             textToChartUI(ns("stress_causes_chart"), "Leading Causes of Stress", height = "350px")
+             # textToChartUI(ns("stress_causes_chart"), "Leading Causes of Stress", height = "350px")
+             plotly::plotlyOutput(ns("stress_causes_chart"), height = "300px")
       )
     ),
     
@@ -90,7 +93,8 @@ mhAwarenessUI <- function(id) {
              )
       ),
       column(6,
-             textToChartUI(ns("self_esteem_chart"), "Self-Esteem Indicators", height = "400px")
+             # textToChartUI(ns("self_esteem_chart"), "Self-Esteem Indicators", height = "400px")
+             plotly::plotlyOutput(ns("self_esteem_chart"), height = "300px")
       )
     ),
     
@@ -103,7 +107,8 @@ mhAwarenessUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("support_awareness_chart"), "Support Structure Awareness", height = "300px")
+             # textToChartUI(ns("support_awareness_chart"), "Support Structure Awareness", height = "300px")
+             plotly::plotlyOutput(ns("support_awareness_chart"), height = "300px")
       ),
       column(6,
              div(class = "insight-box",

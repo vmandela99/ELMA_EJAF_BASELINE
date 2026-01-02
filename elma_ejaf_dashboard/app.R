@@ -88,10 +88,10 @@ ui <- dashboardPage(
   
   dashboardHeader(
     title = div(
-      img(src = "https://via.placeholder.com/40x40/3498db/ffffff?text=T", 
+      img(src = "logo.png", 
           height = "30px", 
           style = "border-radius: 50%; margin-right: 10px;"),
-      span("Tiko Uganda Study Dashboard", style = "font-weight: 600; color: #2c3e50;")
+      span("AYP Study Dashboard", style = "font-weight: 600; color: #f39c12;")
     ),
     titleWidth = 300,
     fixed = TRUE,
@@ -110,28 +110,28 @@ ui <- dashboardPage(
     
     sidebarMenu(
       id = "tabs",
-      menuItem("Overview", tabName = "overview", icon = icon("home", class = "text-primary")),
+      # menuItem("Overview", tabName = "overview", icon = icon("home", class = "text-primary")),
       
       # STUDY BACKGROUND Section
       menuItem("1. STUDY BACKGROUND", 
                tabName = "study_background", 
                icon = icon("book", class = "text-info"),
-               menuSubItem("1.1 Project Context", tabName = "project_context", icon = icon("globe-africa")),
-               menuSubItem("1.2 Tiko Intervention", tabName = "tiko_intervention", icon = icon("handshake")),
-               menuSubItem("1.3 Research Objectives", tabName = "research_objectives", icon = icon("bullseye"))),
+               menuSubItem("Project Context", tabName = "project_context", icon = icon("globe-africa"))),
+               # menuSubItem("1.2 Tiko Intervention", tabName = "tiko_intervention", icon = icon("handshake")),
+               # menuSubItem("1.3 Research Objectives", tabName = "research_objectives", icon = icon("bullseye"))),
       
       # STUDY METHODOLOGY Section
       menuItem("2. STUDY METHODOLOGY", 
                tabName = "study_methodology", 
                icon = icon("flask", class = "text-warning"),
-               menuSubItem("2.1 Study Design", tabName = "study_design", icon = icon("project-diagram")),
-               menuSubItem("2.2 Study Location", tabName = "study_location", icon = icon("map-marker-alt")),
-               menuSubItem("2.3 Sampling Methods", tabName = "sampling_methods", icon = icon("filter")),
-               menuSubItem("2.4 Data Collection", tabName = "data_collection", icon = icon("clipboard-check")),
-               menuSubItem("2.5 Field Procedures", tabName = "field_procedures", icon = icon("procedures")),
-               menuSubItem("2.6 Data Quality", tabName = "data_quality", icon = icon("shield-alt")),
-               menuSubItem("2.7 Data Analysis", tabName = "data_analysis", icon = icon("chart-bar")),
-               menuSubItem("2.8 Ethical Considerations", tabName = "ethical_considerations", icon = icon("balance-scale"))),
+               menuSubItem("Study Design", tabName = "study_design", icon = icon("project-diagram"))),
+               # menuSubItem("2.2 Study Location", tabName = "study_location", icon = icon("map-marker-alt")),
+               # menuSubItem("2.2 Sampling Methods", tabName = "sampling_methods", icon = icon("filter"))),
+               # menuSubItem("2.4 Data Collection", tabName = "data_collection", icon = icon("clipboard-check")),
+               # menuSubItem("2.5 Field Procedures", tabName = "field_procedures", icon = icon("procedures")),
+               # menuSubItem("2.6 Data Quality", tabName = "data_quality", icon = icon("shield-alt")),
+               # menuSubItem("2.7 Data Analysis", tabName = "data_analysis", icon = icon("chart-bar")),
+               # menuSubItem("2.8 Ethical Considerations", tabName = "ethical_considerations", icon = icon("balance-scale"))),
       
       # RESULTS AND DISCUSSIONS Section
       menuItem("3. RESULTS AND DISCUSSIONS", 

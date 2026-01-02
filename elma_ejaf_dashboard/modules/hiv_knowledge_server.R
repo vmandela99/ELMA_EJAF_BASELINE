@@ -71,7 +71,7 @@ hivKnowledgeServer <- function(id) {
           xaxis = list(title = "", tickangle = -45),
           yaxis = list(title = "Percentage with Adequate Knowledge (%)", range = c(0, 100)),
           barmode = "group",
-          showlegend = TRUE,
+          showlegend = FALSE,
           legend = list(orientation = "h", x = 0.5, y = -0.2, xanchor = "center"),
           margin = list(b = 80)
         )
@@ -89,17 +89,17 @@ hivKnowledgeServer <- function(id) {
         text = ~paste0(Positive_Attitudes, "%"),
         textposition = "outside"
       ) %>%
-        add_trace(
-          y = ~Target,
-          name = "Target",
-          marker = list(color = "#bdc3c7", line = list(color = "#7f8c8d", width = 2))
-        ) %>%
+        # add_trace(
+        #   y = ~Target,
+        #   name = "Target",
+        #   marker = list(color = "#bdc3c7", line = list(color = "#7f8c8d", width = 2))
+        # ) %>%
         layout(
           title = "Attitudes Assessment Components",
           xaxis = list(title = "", tickangle = -45),
           yaxis = list(title = "Percentage with Positive Attitudes (%)", range = c(0, 100)),
           barmode = "group",
-          showlegend = TRUE,
+          showlegend = FALSE,
           legend = list(orientation = "h", x = 0.5, y = -0.2, xanchor = "center"),
           margin = list(b = 80)
         )

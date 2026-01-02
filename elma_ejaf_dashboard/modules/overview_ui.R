@@ -37,7 +37,8 @@ overviewUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             interactivePlotUI(ns("overview_timeline"), "Study Timeline")
+             # interactivePlotUI(ns("overview_timeline"), "Study Timeline")
+             plotlyOutput(ns("overview_timeline"))
       ),
       column(6,
              bs4Card(

@@ -1,3 +1,5 @@
+source("data/socio_demographic_data.R")
+
 # modules/socio_demographic_server.R
 socioDemographicServer <- function(id) {
   moduleServer(id, function(input, output, session) {

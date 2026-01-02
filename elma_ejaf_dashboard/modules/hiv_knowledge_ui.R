@@ -57,7 +57,8 @@ hivKnowledgeUI <- function(id) {
              )
       ),
       column(6,
-             textToChartUI(ns("knowledge_components_chart"), "Knowledge Components Breakdown", height = "350px")
+             # textToChartUI(ns("knowledge_components_chart"), "Knowledge Components Breakdown", height = "350px")
+             plotly::plotlyOutput(ns("knowledge_components_chart"), height = "300px")
       )
     ),
     
@@ -70,7 +71,8 @@ hivKnowledgeUI <- function(id) {
     ),
     fluidRow(
       column(6,
-             textToChartUI(ns("attitudes_chart"), "Attitudes Assessment Components", height = "350px")
+             # textToChartUI(ns("attitudes_chart"), "Attitudes Assessment Components", height = "350px")
+             plotly::plotlyOutput(ns("attitudes_chart"), height = "300px")
       ),
       column(6,
              highlightCardUI(
