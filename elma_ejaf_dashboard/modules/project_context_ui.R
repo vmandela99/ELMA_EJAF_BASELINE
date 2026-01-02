@@ -6,10 +6,10 @@ projectContextUI <- function(id) {
     
     # Summary Cards
     fluidRow(
-      column(3, metricCardUI(ns("stat1"), "AYP Population", "8.2M", "Ages 10-24", "users", "info")),
-      column(3, metricCardUI(ns("stat2"), "New HIV Infections", "60%", "Among AYP", "virus", "danger")),
-      column(3, metricCardUI(ns("stat3"), "Contraceptive Use", "9.4%", "Age 15-19", "baby-carriage", "warning")),
-      column(3, metricCardUI(ns("stat4"), "MH Disorders", "12.5%", "Among youth", "brain", "success"))
+      column(6, metricCardUI(ns("stat1"), "AYP Population", "8.2M", "Ages 10-24", "users", "info")),
+      column(6, metricCardUI(ns("stat2"), "New HIV Infections", "60%", "Among AYP", "virus", "danger")),
+      column(6, metricCardUI(ns("stat3"), "Contraceptive Use", "9.4%", "Age 15-19", "baby-carriage", "warning")),
+      column(6, metricCardUI(ns("stat4"), "MH Disorders", "12.5%", "Among youth", "brain", "success"))
     ),
     
     fluidRow(
